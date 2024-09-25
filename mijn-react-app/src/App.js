@@ -1,23 +1,17 @@
 import logo from './logo.svg';
 import './App.css';
+import MusicPlayer from './components/MusicPlayer';
+
 
 function App() {
+
+  const songs = [
+    { title: 'Ed sheeran - Shape of You', url: '/music/Ed Sheeran - Shape of You (Official Music Video).mp3' },
+  ];
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <h1>React Music Player</h1>
+      <MusicPlayer songs={songs} />
     </div>
   );
 }
